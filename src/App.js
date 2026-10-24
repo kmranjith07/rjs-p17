@@ -1,3 +1,4 @@
+
 import React, { useReducer } from "react";
 import cartReducer from "./reducer";
 import ProductList from "./components/ProductList";
@@ -22,22 +23,19 @@ const products = [
 ];
 
 function App() {
-  const initialState = [];
-
-  const [cart, dispatch] = useReducer(
-    cartReducer,
-    initialState
-  );
+  const [cart, dispatch] = useReducer(cartReducer, []);
 
   return (
     <div className="container">
       <h1>Shopping Cart</h1>
 
+      <h2>Products</h2>
       <ProductList
         products={products}
         dispatch={dispatch}
       />
 
+      <h2>Your Cart</h2>
       <Cart
         cart={cart}
         dispatch={dispatch}

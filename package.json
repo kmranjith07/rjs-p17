@@ -1,20 +1,25 @@
+
 {
   "name": "program17-shopping-cart",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://madhesh78.github.io/prg17",
   "dependencies": {
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "gh-pages": "^6.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll=false",
-    "test:coverage": "react-scripts test --watchAll=false --coverage"
+    "test:coverage": "react-scripts test --watchAll=false --coverage",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
